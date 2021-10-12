@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerPaintings19V">
+    <children>
+        <ScrollPane layoutX="537.0" prefHeight="414.0" prefWidth="262.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="726.0" prefWidth="246.0" style="-fx-background-color: #252a34;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/zhivopis_19v/1024px-Karl_Brullov_-_The_Last_Day_of_Pompeii_-_Google_Art_Project.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/zhivopis_19v/406470_4_i_205.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/zhivopis_19v/dama.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/zhivopis_19v/unnamed.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TextArea editable="false" layoutX="47.0" layoutY="211.0" prefHeight="154.0" prefWidth="462.0" style="-fx-background-color: #252a34;" text="Романтизм был эпохой перемен.&#10;&#10;Он возник под влиянием идеалов свободы Французской революции, распространившихся по Европе вместе с наполеоновскими завоеваниями. После освободительных войн наступила фаза жестких репрессий, все достигнутое было отринуто, и о свободе оставалось только мечтать. В искусстве романтизма идея свободы выражена в иносказательной форме - в кажущихся безграничными пейзажах немецкого романтика Каспара Давида Фридриха (1774-1840) или в идиллических картинах из сельской жизни Алексея Гавриловича Венецианова (1780-1847)." wrapText="true">
+            <font>
+                <Font name="Century" size="11.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="132.0" fitWidth="286.0" layoutX="203.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../assets/zhivopis_19v/lodka.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="personalAreaPersWButton" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #00e8ff; -fx-border-radius: 12; -fx-background-radius: 12;" text="Живопись 19 века" textFill="#252a34">
+            <font>
+                <Font name="Bookman Old Style" size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

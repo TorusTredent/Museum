@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.registration.ControllerWRegistration">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;">
+            <children>
+                <TextField fx:id="lastNameRWField" layoutX="451.0" layoutY="126.0" prefHeight="38.0" prefWidth="294.0" promptText="Last Name" style="-fx-background-radius: 12;">
+                    <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordRWField" layoutX="253.0" layoutY="181.0" prefHeight="9.0" prefWidth="294.0" promptText="Password" style="-fx-background-radius: 12;">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="enterRWButton" layoutX="349.0" layoutY="323.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="102.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="Enter" textFill="#252a34">
+                    <font>
+                        <Font name="Bookman Old Style" size="19.0" />
+                    </font>
+                </Button>
+            <Text fill="#08d9d6" layoutX="314.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration" wrappingWidth="171.7906494140625">
+               <font>
+                  <Font name="Bookman Old Style" size="29.0" />
+               </font>
+            </Text>
+            <TextField fx:id="firstNameRWField" layoutX="47.0" layoutY="126.0" prefHeight="38.0" prefWidth="294.0" promptText="First name" style="-fx-background-radius: 12;">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userNameRWField" layoutX="47.0" layoutY="69.0" prefHeight="38.0" prefWidth="294.0" promptText="Login" style="-fx-background-radius: 12;">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordRepRWField" layoutX="253.0" layoutY="229.0" prefHeight="9.0" prefWidth="294.0" promptText="Repeat password" style="-fx-background-radius: 12;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </PasswordField>
+            <RadioButton fx:id="maleRWRadioButton" layoutX="146.0" layoutY="290.0" mnemonicParsing="false" selected="true" text="Male" textFill="#08d9d6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="RadioButton" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="femaleRWRadioButton" layoutX="598.0" layoutY="299.0" mnemonicParsing="false" text="Female" textFill="#08d9d6" toggleGroup="$RadioButton" />
+            <Button fx:id="backToSingUpRWButton" layoutX="699.0" layoutY="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="79.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+               <font>
+                  <Font name="Bookman Old Style" size="19.0" />
+               </font>
+            </Button>
+            <TextField fx:id="mobileNumberRegW" layoutX="451.0" layoutY="69.0" prefHeight="38.0" prefWidth="294.0" promptText="+375" style="-fx-background-radius: 12;" text="+375 ">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

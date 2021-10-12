@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerStreetArt">
+   <children>
+      <ScrollPane layoutX="537.0" prefHeight="407.0" prefWidth="262.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="728.0" prefWidth="246.0" style="-fx-background-color: #252a34;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/street_art/609145.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/street_art/brooklyn-street-art-Capture-the-Street-River-tales-10-19-web-6.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/street_art/images.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/street_art/загружено.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+         <font>
+            <Font name="Bookman Old Style" size="19.0" />
+         </font>
+      </Button>
+      <TextArea editable="false" layoutX="47.0" layoutY="211.0" prefHeight="154.0" prefWidth="462.0" style="-fx-background-color: #252a34;" text="Вы Бэнкси — художника, который создал впечатляющий личный бренд, &#10;так ни разу и не показав своё лицо (хотя, возможно, это всё-таки Роберт Дель Ная). &#10;Несмотря на сложную политическую обстановку и нежелание некоторых коллек-&#10;ционеров отправлять свои сокровища на выставку  привезли оригинальные &#10;живописные и трафаретные работы из музеев современного искусства и частных &#10;собраний.&#10;&#10;Кроме них в экспозицию вошли фотографии разрисованных Бэнкси зданий и руин,&#10;репродукции принтов и видео, которое за двадцать минут рассказывает о творчес-&#10;ком пути и основных проектах уличного художника. ">
+         <font>
+            <Font name="Century" size="11.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="132.0" fitWidth="286.0" layoutX="203.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/street_art/brooklyn-street-art-Capture-the-Street-River-tales-10-19-web-7.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="personalAreaPersWButton" layoutX="215.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" style="-fx-background-color: #a600ff; -fx-border-radius: 12; -fx-background-radius: 12;" text="Street Art" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
