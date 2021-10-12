@@ -54,7 +54,7 @@
             <Image url="@../../../../assets/street_art/brooklyn-street-art-Capture-the-Street-River-tales-10-19-web-7.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="personalAreaPersWButton" layoutX="215.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" style="-fx-background-color: #a600ff; -fx-border-radius: 12; -fx-background-radius: 12;" text="Street Art" textFill="WHITE">
+      <Button accessibleRole="TEXT_FIELD" layoutX="215.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" style="-fx-background-color: #a600ff; -fx-border-radius: 12; -fx-background-radius: 12;" text="Street Art" textFill="WHITE">
          <font>
             <Font name="Bookman Old Style" size="17.0" />
          </font>

@@ -17,8 +17,6 @@ public class ControllerModernisty {
     @FXML
     private Button backToAllExhibWButton;
 
-    @FXML
-    private Button personalAreaPersWButton;
 
     @FXML
     void initialize() {

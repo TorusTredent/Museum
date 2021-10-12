@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import sample.service.imp.AllExhibitionsServiceImp;
 
 public class ControllerAllExhibitions {
@@ -77,6 +78,16 @@ public class ControllerAllExhibitions {
 
         openModernisityWButton.setOnAction(actionEvent -> {
             allExhs.openNewW(openModernisityWButton,"/sample/view/personal/allExhibitions/exhibitions/WindowModernisty.fxml");
+        });
+
+        openCollectShukiniWButton.setOnAction(actionEvent -> {
+            allExhs.openNewW(openCollectShukiniWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowCollectionShukini.fxml");
+        });
+
+        backToPersonalWButton.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode().equals(KeyCode.ESCAPE)) {
+                allExhs.backToPersonalW(backToPersonalWButton);
+            }
         });
     }
 }

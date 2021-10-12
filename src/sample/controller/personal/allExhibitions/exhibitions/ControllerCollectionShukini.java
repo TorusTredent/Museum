@@ -4,9 +4,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import sample.service.imp.ExhibitServiceImp;
 
-public class ControllerStreetArt {
+public class ControllerCollectionShukini {
 
     @FXML
     private ResourceBundle resources;
@@ -17,11 +18,14 @@ public class ControllerStreetArt {
     @FXML
     private Button backToAllExhibWButton;
 
+
     @FXML
     void initialize() {
-        ExhibitServiceImp street = new ExhibitServiceImp();
-        backToAllExhibWButton.setOnAction(actionEvent -> {
-            street.backToAllExhibitW(backToAllExhibWButton);
+        backToAllExhibWButton.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode().equals(KeyCode.ESCAPE)){
+                ExhibitServiceImp exhibit = new ExhibitServiceImp();
+                exhibit.backToAllExhibitW(backToAllExhibWButton);
+            }
         });
     }
 }

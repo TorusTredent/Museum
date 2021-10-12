@@ -18,9 +18,6 @@ public class ControllerPaintings19V {
     private Button backToAllExhibWButton;
 
     @FXML
-    private Button personalAreaPersWButton;
-
-    @FXML
     void initialize() {
         backToAllExhibWButton.setOnAction(actionEvent -> {
             ExhibitServiceImp exhibit = new ExhibitServiceImp();
