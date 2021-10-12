@@ -38,7 +38,7 @@
                 </AnchorPane>
             </content>
         </ScrollPane>
-        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #63b4b8; -fx-background-radius: 12;" text="back" textFill="#252a34">
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #63b4b8; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="back" textFill="#252a34">
             <font>
                 <Font name="Bookman Old Style" size="19.0" />
             </font>
@@ -53,7 +53,7 @@
                 <Image url="@../../../../assets/collec_shukini/content_02shchukin_kron.jpg" />
             </image>
         </ImageView>
-        <Button accessibleRole="TEXT_FIELD" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #63b4b8; -fx-border-radius: 12; -fx-background-radius: 12;" text="Коллекция Щукини" textFill="#4b3869">
+        <Button accessibleRole="TEXT_FIELD" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #63b4b8; -fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: black;" text="Коллекция Щукини" textFill="#4b3869">
             <font>
                 <Font name="Bookman Old Style" size="17.0" />
             </font>

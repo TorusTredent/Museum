@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import sample.service.imp.ExhibitServiceImp;
 
 public class ControllerModernisty {
@@ -20,9 +21,17 @@ public class ControllerModernisty {
 
     @FXML
     void initialize() {
-       backToAllExhibWButton.setOnAction(actionEvent -> {
-           ExhibitServiceImp exhib = new ExhibitServiceImp();
-           exhib.backToAllExhibitW(backToAllExhibWButton);
-       });
+
+        backToAllExhibWButton.setOnAction(actionEvent -> {
+            ExhibitServiceImp exhibit = new ExhibitServiceImp();
+            exhibit.backToAllExhibitW(backToAllExhibWButton);
+        });
+
+        backToAllExhibWButton.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode().equals(KeyCode.ESCAPE)){
+                ExhibitServiceImp exhibit = new ExhibitServiceImp();
+                exhibit.backToAllExhibitW(backToAllExhibWButton);
+            }
+        });
     }
 }

@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import sample.service.imp.ExhibitServiceImp;
 
-public class ControllerCollectionShukini {
+public class ControllerGalereyaSatchi {
 
     @FXML
     private ResourceBundle resources;
@@ -17,7 +17,6 @@ public class ControllerCollectionShukini {
 
     @FXML
     private Button backToAllExhibWButton;
-
 
     @FXML
     void initialize() {
@@ -35,3 +34,5 @@ public class ControllerCollectionShukini {
         });
     }
 }
+
+

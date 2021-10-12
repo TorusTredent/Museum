@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerPaintings19V">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #d3d1e4;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerPaintings19V">
     <children>
         <ScrollPane layoutX="537.0" prefHeight="414.0" prefWidth="262.0">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="726.0" prefWidth="246.0" style="-fx-background-color: #252a34;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="726.0" prefWidth="246.0" style="-fx-background-color: #ababcb;">
                     <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -38,7 +38,7 @@
                 </AnchorPane>
             </content>
         </ScrollPane>
-        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #e2cbdb; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="back" textFill="#252a34">
             <font>
                 <Font name="Bookman Old Style" size="19.0" />
             </font>
@@ -53,7 +53,7 @@
                 <Image url="@../../../../assets/zhivopis_19v/lodka.jpg" />
             </image>
         </ImageView>
-        <Button accessibleRole="TEXT_FIELD" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #00e8ff; -fx-border-radius: 12; -fx-background-radius: 12;" text="Живопись 19 века" textFill="#252a34">
+        <Button accessibleRole="TEXT_FIELD" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #e2cbdb; -fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: black;" text="Живопись 19 века" textFill="#252a34">
             <font>
                 <Font name="Bookman Old Style" size="17.0" />
             </font>

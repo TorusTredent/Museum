@@ -84,6 +84,14 @@ public class ControllerAllExhibitions {
             allExhs.openNewW(openCollectShukiniWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowCollectionShukini.fxml");
         });
 
+        openGalSatchiWButton.setOnAction(actionEvent -> {
+            allExhs.openNewW(openGalSatchiWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowGalereyaSatchi.fxml");
+        });
+
+        backToPersonalWButton.setOnAction(actionEvent -> {
+           allExhs.backToPersonalW(backToPersonalWButton);
+        });
+
         backToPersonalWButton.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode().equals(KeyCode.ESCAPE)) {
                 allExhs.backToPersonalW(backToPersonalWButton);
