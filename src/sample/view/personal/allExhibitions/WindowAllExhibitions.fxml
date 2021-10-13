@@ -130,7 +130,7 @@
             <Font name="Bookman Old Style" size="29.0" />
          </font>
       </Text>
-      <Button fx:id="backToPersonalWButton" layoutX="683.0" layoutY="7.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="74.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+      <Button fx:id="backToPersonalWButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="74.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
          <font>
             <Font name="Bookman Old Style" size="19.0" />
          </font>

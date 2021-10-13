@@ -6,11 +6,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import sample.service.imp.SingUpServiceImp;
 import javafx.scene.input.KeyCode;
+import sample.service.imp.SingUpServiceImp;
 
 public class ControllerWSingUp {
 
@@ -35,10 +36,17 @@ public class ControllerWSingUp {
     @FXML
     void initialize() {
 
-//        passwordField.setOnAction(event -> {
-//            if(event.getCode(  ).equals(KeyEvent.ENTER))
-//                loginButton.fire();
-//        });
+        loginField.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                passwordField.requestFocus();
+            }
+        });
+
+        passwordField.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                loginButton.fire();
+            }
+        });
 
         loginButton.setOnAction(event -> {
             List<TextField> listOfFields = new ArrayList<>();

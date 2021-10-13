@@ -23,5 +23,5 @@ public interface PersonalAreaService {
     String takeMobileNumberFromDB();
     String takeGenderFromDB();
     boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
-                             List<TextField> listOfOldTextField, List<RadioButton> oldRadioButtonList);
+                             List<String> listOfOldTextField);
 }

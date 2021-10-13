@@ -19,6 +19,7 @@ public class ControllerWPersonalArea {
     ObservableList<Ticket> ticket = FXCollections.observableArrayList();
     PersonalAreaServiceImp personal = new PersonalAreaServiceImp();
 
+
     @FXML
     private ResourceBundle resources;
 
@@ -75,6 +76,7 @@ public class ControllerWPersonalArea {
 
     @FXML
     void initialize() {
+        List<String> listOfOldTextField = new ArrayList<>();
 
         loginTextField.setText(personal.takeLoginFromDB());
         firstNameTextField.setText(personal.takeFirstNameFromDB());
@@ -82,16 +84,8 @@ public class ControllerWPersonalArea {
         passwordTextField.setText(personal.takePasswordFromDB());
         mobileNumberTextField.setText(personal.takeMobileNumberFromDB());
 
-        List<TextField> listOfOldTextField = new ArrayList<>();
-        listOfOldTextField.add(firstNameTextField);
-        listOfOldTextField.add(lastNameTextField);
-        listOfOldTextField.add(loginTextField);
-        listOfOldTextField.add(passwordTextField);
-        listOfOldTextField.add(mobileNumberTextField);
-
-        List<RadioButton> listOfOldRadButton = new ArrayList<>();
-        listOfOldRadButton.add(maleRadioButton);
-        listOfOldRadButton.add(femaleRadioButton);
+        listOfOldTextField.add(personal.takeLoginFromDB());
+        listOfOldTextField.add(personal.takeMobileNumberFromDB());
 
         if(personal.takeGenderFromDB().equals("мужской")) {
             maleRadioButton.fire();
@@ -124,11 +118,11 @@ public class ControllerWPersonalArea {
             radioButtonList.add(maleRadioButton);
             radioButtonList.add(femaleRadioButton);
 
-            if(!personal.checkFieldsValue(listOfTextField, radioButtonList, listOfOldTextField, listOfOldRadButton)) {
-                System.out.println("Значения неверны");
-            } else {
+            if(personal.checkFieldsValue(listOfTextField, radioButtonList, listOfOldTextField)) {
                 personal.acceptChanges(listOfTextField, radioButtonList);
                 personal.updateW(acceptButton);
+            } else {
+                System.out.println("Значения неверны");
             }
         });
 
@@ -147,6 +141,4 @@ public class ControllerWPersonalArea {
         table.setItems(ticket);
     }
 
-    private void updateW() {
-    }
 }

@@ -50,7 +50,8 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
 
     @Override
     public boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
-                                    List<TextField> listOfOldTextField, List<RadioButton> oldRadioButtonList) {
+                                    List<String> listOfOldTextField) {
+
         if(listOfTextField.get(4).getText().length() > 13) {
             shakeMobileField(listOfTextField.get(4));
             return false;
@@ -59,22 +60,24 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
         String newUserName = listOfTextField.get(2).getText().toLowerCase();
         String newMobileNumber = listOfTextField.get(4).getText().replaceAll("\\s+","");
 
-        String oldUserName = listOfOldTextField.get(2).getText().toLowerCase();
-        String oldMobileNumber = listOfOldTextField.get(4).getText().replaceAll("\\s+","");
+        String oldUserName = listOfOldTextField.get(0).toLowerCase().trim();
+        String oldMobileNumber = listOfOldTextField.get(1).replaceAll("\\s+","");
 
-        if(!newUserName.equals(oldUserName)) {
-            if (PersonalAreaRepository.checkUsername(newUserName)) {
-                if (!newMobileNumber.equals(oldMobileNumber)) {
-                    return PersonalAreaRepository.checkMobileNumber(newMobileNumber);
-                } else {
-                    return true;
-                }
-            } else {
+        if (!newUserName.equals(oldUserName)) {
+            if (!PersonalAreaRepository.checkUsername(newUserName)) {
+                System.out.println("Имя уже существует");
                 return false;
             }
-        } else {
-            return newMobileNumber.equals(oldMobileNumber);
         }
+
+        if (!newMobileNumber.equals(oldMobileNumber)) {
+            if (!PersonalAreaRepository.checkMobileNumber(newMobileNumber)){
+                System.out.println("Телефон уже существует");
+                return false;
+            }
+        }
+        return true;
+
     }
 
     @Override

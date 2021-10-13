@@ -95,12 +95,7 @@ public class PersonalAreaRepository extends Configs {
 
                 try (Statement statement = connection.createStatement()) {
                     ResultSet rs = statement.executeQuery(query);
-                    while(rs.next()) {
-                        if (rs.getString(1).equals(inputUserName)) {
-                            return false;
-                        }
-                    }
-                    return true;
+                    return  !rs.next();
                 }
             } catch (SQLException se) {
                 se.printStackTrace();
