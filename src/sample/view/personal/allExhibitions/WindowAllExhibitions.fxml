@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.ControllerAllExhibitions">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.ControllerAllExhibitions">
    <children>
       <ScrollPane layoutY="51.0" prefHeight="351.0" prefWidth="800.0" style="-fx-background-color: #08d9d6;">
         <content>
@@ -31,7 +31,7 @@
                         <Image url="@../../../assets/nacGal_modernisty/imgpreview.jpg" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="126.0" fitWidth="192.0" layoutX="37.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="126.0" fitWidth="192.0" layoutX="44.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../assets/street_art/brooklyn-street-art-Capture-the-Street-River-tales-10-19-web-7.jpg" />
                      </image>
@@ -41,12 +41,12 @@
                         <Image url="@../../../assets/galereya_satchi/galereya_saatchi2.jpg" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="userNameRWField" editable="false" layoutX="86.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="10.10.21">
+                  <TextField fx:id="userNameRWField" editable="false" layoutX="41.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="10.10.21">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="userNameRWField1" editable="false" layoutX="80.0" layoutY="170.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-radius: 12; -fx-background-color: #09ffe5;" text="Street Art">
+                  <TextField fx:id="userNameRWField1" editable="false" layoutX="87.0" layoutY="170.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-radius: 12; -fx-background-color: #09ffe5;" text="Street Art">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
@@ -56,7 +56,7 @@
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="userNameRWField2" editable="false" layoutX="355.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="13.08.21">
+                  <TextField fx:id="userNameRWField2" editable="false" layoutX="302.0" layoutY="225.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="13.08.21">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
@@ -66,7 +66,7 @@
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="userNameRWField21" editable="false" layoutX="674.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="27.06.21">
+                  <TextField fx:id="userNameRWField21" editable="false" layoutX="630.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="27.06.21">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
@@ -76,7 +76,7 @@
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="userNameRWField211" editable="false" layoutX="946.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="01.04.21">
+                  <TextField fx:id="userNameRWField211" editable="false" layoutX="897.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="01.04.21">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
@@ -86,27 +86,27 @@
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="userNameRWField2111" editable="false" layoutX="1257.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="19.02.21">
+                  <TextField fx:id="userNameRWField2111" editable="false" layoutX="1202.0" layoutY="223.0" prefHeight="28.0" prefWidth="92.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #08d9d6;" text="19.02.21">
                      <font>
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </TextField>
-                  <Line endX="77.40005493164062" endY="-1.6000213623046875" layoutX="144.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
+                  <Line endX="94.59999084472656" endY="-1.6000213623046875" layoutX="151.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
                   <Line endX="77.40005493164062" endY="-1.6000213623046875" layoutX="413.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
                   <Line endX="77.40005493164062" endY="-1.6000213623046875" layoutX="732.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
-                  <Line endX="77.40005493164062" endY="-1.6000213623046875" layoutX="1004.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
+                  <Line endX="84.800048828125" endY="-1.6000213623046875" layoutX="1004.0" layoutY="219.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
                   <Line endX="77.40005493164062" endY="-1.6000213623046875" layoutX="1315.0" layoutY="218.0" startX="-101.79996490478516" startY="-1.6000213623046875" />
-                  <Button fx:id="openStreetArtWButton" layoutX="65.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
+                  <Button fx:id="openStreetArtWButton" layoutX="72.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
                      <font>
                         <Font name="Bookman Old Style" size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="openPainting19VWButton" layoutX="334.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
+                  <Button fx:id="openPainting19VWButton" layoutX="334.0" layoutY="260.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
                      <font>
                         <Font name="Bookman Old Style" size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="openModernisityWButton" layoutX="654.0" layoutY="259.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
+                  <Button fx:id="openModernisityWButton" layoutX="654.0" layoutY="261.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Просмотр" textFill="#09ffe5">
                      <font>
                         <Font name="Bookman Old Style" size="19.0" />
                      </font>
@@ -121,6 +121,31 @@
                         <Font name="Bookman Old Style" size="19.0" />
                      </font>
                   </Button>
+                  <TextField fx:id="userNameRWField3" alignment="CENTER" editable="false" layoutX="137.0" layoutY="223.0" prefHeight="31.0" prefWidth="108.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #8be392;" text="идет">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="userNameRWField31" editable="false" layoutX="400.0" layoutY="225.0" prefHeight="31.0" prefWidth="108.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #c74d4d;" text="закончена">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="userNameRWField311" editable="false" layoutX="726.0" layoutY="223.0" prefHeight="31.0" prefWidth="108.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #c74d4d;" text="закончена">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="userNameRWField3111" editable="false" layoutX="993.0" layoutY="223.0" prefHeight="31.0" prefWidth="108.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #c74d4d;" text="закончена">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="userNameRWField31111" editable="false" layoutX="1300.0" layoutY="223.0" prefHeight="31.0" prefWidth="108.0" promptText="Login" style="-fx-background-radius: 12; -fx-background-color: #c74d4d;" text="закончена">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
         </content>
@@ -130,7 +155,7 @@
             <Font name="Bookman Old Style" size="29.0" />
          </font>
       </Text>
-      <Button fx:id="backToPersonalWButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="74.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="back" textFill="#252a34">
+      <Button fx:id="backToPersonalWButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="84.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 12;" text="назад" textFill="#252a34">
          <font>
             <Font name="Bookman Old Style" size="19.0" />
          </font>

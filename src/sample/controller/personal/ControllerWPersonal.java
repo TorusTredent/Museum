@@ -54,9 +54,9 @@ public class ControllerWPersonal {
 //            person.openComingExhibitW(comingExPersWButton);
 //        });
 //
-//        orderTicketsPersWButton.setOnAction(event -> {
-//            person.openOrderTicketsW(orderTicketsPersWButton);
-//        });
+        orderTicketsPersWButton.setOnAction(event -> {
+            person.openNewW(orderTicketsPersWButton, "/sample/view/personal/bookingTicket/WindowBookingTicket.fxml");
+        });
 //
 //        basketPersWButton.setOnAction(event -> {
 //            person.openBasketW(basketPersWButton);

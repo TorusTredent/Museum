@@ -32,7 +32,7 @@ public class User {
         this.balance = balance;
     }
 
-    public static long getId() {
+    public static int getId() {
         return id;
     }
 

@@ -39,5 +39,14 @@ public class Const {
     public static final String EXHIBIT_EXHIBITION_ID = "exhibition_id";
 
 
+    public static final String TICKETS_IN_BASKET_TABLE = "tickets_in_basket";
+
+    public static final String TICKET_IN_BASKET_ID = "id";
+    public static final String TICKET_IN_BASKET_DATA = "data";
+    public static final String TICKET_IN_BASKET_EXHIBITION_NAME = "exhibition_name";
+    public static final String TICKET_IN_BASKET_AMOUNT = "amount_tickets";
+    public static final String TICKET_IN_BASKET_COST = "cost";
+    public static final String TICKET_IN_BASKET_NUMBER = "number_ticket";
+    public static final String TICKET_IN_BASKET_USER_ID = "user_id";
 
 }
