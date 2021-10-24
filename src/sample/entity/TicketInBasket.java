@@ -4,15 +4,26 @@ public class TicketInBasket {
     private long id;
     private String numberTicket;
     private String data;
-    private String exhibitionName;
+    private int exhibitionId;
     private int amountTicket;
     private int cost;
     private int userId;
 
-    public TicketInBasket(String numberTicket, String data, String exhibitionName, int amountTicket, int cost, int userId) {
+
+
+    public TicketInBasket(String numberTicket, String data, int amountTicket, int cost) {
         this.numberTicket = numberTicket;
         this.data = data;
-        this.exhibitionName = exhibitionName;
+        this.amountTicket = amountTicket;
+        this.cost = cost;
+    }
+
+
+
+    public TicketInBasket(String numberTicket, String data, int exhibitionId, int amountTicket, int cost, int userId) {
+        this.numberTicket = numberTicket;
+        this.data = data;
+        this.exhibitionId = exhibitionId;
         this.amountTicket = amountTicket;
         this.cost = cost;
         this.userId = userId;
@@ -42,12 +53,12 @@ public class TicketInBasket {
         this.data = data;
     }
 
-    public String getExhibitionName() {
-        return exhibitionName;
+    public int getExhibitionId() {
+        return exhibitionId;
     }
 
-    public void setExhibitionName(String exhibitionName) {
-        this.exhibitionName = exhibitionName;
+    public void setExhibitionId(int exhibitionId) {
+        this.exhibitionId = exhibitionId;
     }
 
     public int getAmountTicket() {
@@ -80,7 +91,7 @@ public class TicketInBasket {
                 "id=" + id +
                 ", numberTicket='" + numberTicket + '\'' +
                 ", data='" + data + '\'' +
-                ", exhibitionName='" + exhibitionName + '\'' +
+                ", exhibitionName='" + exhibitionId + '\'' +
                 ", amountTicket=" + amountTicket +
                 ", cost=" + cost +
                 ", user_id=" + userId +

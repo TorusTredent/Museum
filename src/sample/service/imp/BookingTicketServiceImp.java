@@ -8,8 +8,8 @@ import sample.repository.BookingTicketRepository;
 import sample.service.BookingTicketService;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookingTicketServiceImp implements BookingTicketService {
@@ -64,20 +64,34 @@ public class BookingTicketServiceImp implements BookingTicketService {
     public void addToBasket(LocalDate data, String exhibitName, String amountTicket, String cost) {
         int trash;
 
-        if(BookingTicketRepository.tableIsEmpty()) {
-            String lastNumberTicket = BookingTicketRepository.getLastNumberTicket();
-            trash = Integer.parseInt(lastNumberTicket) + 1;
+        List<Integer> listInteger = new ArrayList<>();
+        if (BookingTicketRepository.tableIsEmpty()) {
+            List<String> listNumbers = BookingTicketRepository.getLastNumberTicket();
+            for (String temp : listNumbers) {
+                listInteger.add(Integer.valueOf(temp));
+            }
+            trash = Collections.max(listInteger) + 1;
         } else {
-            String lastNumberTicketFromBasket = BookingTicketRepository.getLastNumberTicketBasket();
-            trash = Integer.parseInt(lastNumberTicketFromBasket) + 1;
+            List<String> listNumbers = BookingTicketRepository.getLastNumberTicketInBasket();
+            for (String temp : listNumbers) {
+                listInteger.add(Integer.valueOf(temp));
+            }
+            trash = Collections.max(listInteger) + 1;
         }
 
-        String numberTicket = String.valueOf(trash);
         String date = data.toString();
         int amount = Integer.parseInt(amountTicket);
-        int price = Integer.parseInt(cost);
-        TicketInBasket ticketInBasket = new TicketInBasket(numberTicket, date, exhibitName, amount, price, User.getId());
-        BookingTicketRepository.addTicketToBasket(ticketInBasket);
+        int price = Integer.parseInt(cost) / amount;
+        int exhibitionId = BookingTicketRepository.getExhibitionId(exhibitName);
+
+        int i = 0;
+        while (i < amount) {
+            String numberTicket = String.valueOf(trash);
+            TicketInBasket ticketInBasket = new TicketInBasket(numberTicket, date, exhibitionId, 1, price, User.getId());
+            BookingTicketRepository.addTicketToBasket(ticketInBasket);
+            trash++;
+            i++;
+        }
     }
 
     @Override
@@ -89,4 +103,5 @@ public class BookingTicketServiceImp implements BookingTicketService {
     private boolean checkValue(String numberTicket) {
         return numberTicket.matches("[\\d]+");
     }
+
 }

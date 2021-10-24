@@ -172,4 +172,9 @@ public class ControllerBookingTicket {
         Shake field = new Shake(textField);
         field.playAnim();
     }
+
+    private void setLabelGreen(String str) {
+
+    }
+
 }

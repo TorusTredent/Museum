@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #08d9d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.basket.ControllerBasket">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="124.0" layoutY="14.0" prefHeight="38.0" prefWidth="206.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font>
+      </Label>
+      <Text layoutX="335.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Корзина" wrappingWidth="130.3999816894531">
+         <font>
+            <Font name="Bookman Old Style" size="29.0" />
+         </font>
+      </Text>
+      <Button fx:id="backToPersonalMenu" contentDisplay="CENTER" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="назад" textFill="#09ffe5">
+         <font>
+            <Font name="Bookman Old Style" size="19.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableWithTickets" layoutX="25.0" layoutY="70.0" prefHeight="278.0" prefWidth="502.0" style="-fx-background-color: #08d9d6;">
+        <columns>
+          <TableColumn fx:id="numberTicketColumn" prefWidth="129.5999755859375" text="номер билета" />
+            <TableColumn fx:id="nameExhibitionColumn" prefWidth="173.5999755859375" text="название выставки" />
+          <TableColumn fx:id="dateColumn" prefWidth="104.0" text="дата" />
+            <TableColumn fx:id="costColumn" prefWidth="94.39999999999998" text="цена" />
+        </columns>
+      </TableView>
+      <Button fx:id="buyTicketButton" contentDisplay="CENTER" layoutX="620.0" layoutY="338.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="купить" textFill="#09ffe5">
+         <font>
+            <Font name="Bookman Old Style" size="19.0" />
+         </font>
+      </Button>
+      <Text fill="#252a34" layoutX="632.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Баланс:" wrappingWidth="82.6632080078125">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="balanceTextField" editable="false" layoutX="715.0" layoutY="18.0" prefHeight="31.0" prefWidth="70.0" promptText="баланс" style="-fx-background-radius: 12;">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </TextField>
+      <Button fx:id="removeTicketButton" contentDisplay="CENTER" layoutX="620.0" layoutY="122.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="удалить" textFill="#09ffe5">
+         <font>
+            <Font name="Bookman Old Style" size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="numberTicketRemoveTextField" alignment="CENTER" layoutX="589.0" layoutY="200.0" prefHeight="25.0" prefWidth="166.0" promptText="номер билета" style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #808080;" visible="false">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </TextField>
+      <Button fx:id="openPersonalAreaButton" contentDisplay="CENTER" layoutX="578.0" layoutY="70.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Личный кабинет" textFill="#09ffe5">
+         <font>
+            <Font name="Bookman Old Style" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="acceptChangiesButton" contentDisplay="CENTER" layoutX="584.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="принять изменения" textFill="#09ffe5" visible="false">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="nameExhibitRadioButton" layoutX="542.0" layoutY="168.0" mnemonicParsing="false" text="По названию" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="RadioButton" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="numberTicketRadioButton" layoutX="673.0" layoutY="168.0" mnemonicParsing="false" text="По номеру билета" toggleGroup="$RadioButton" visible="false" />
+      <TextField fx:id="nameExhibRemoveTextField" alignment="CENTER" layoutX="590.0" layoutY="200.0" prefHeight="25.0" prefWidth="166.0" promptText="название" style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #808080;" visible="false">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberTicketRemoveTickTextField" alignment="CENTER" disable="true" layoutX="589.0" layoutY="239.0" prefHeight="25.0" prefWidth="166.0" promptText="количество" style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #808080;" visible="false">
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

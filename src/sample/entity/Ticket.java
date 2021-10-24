@@ -3,26 +3,68 @@ package sample.entity;
 public class Ticket {
     private long id;
     private String numberTicket;
-    private String exhibition_date;
-    private String exhibition_name;
-    private int exhibition_price;
+    private String exhibitionDate;
+    private String exhibitionName;
+    private int exhibitionId;
+    private int exhibitionPrice;
     private int user_id;
 
     public Ticket() {
     }
 
-    public Ticket(String numberTicket, String exhibition_date, String exhibition_name) {
+    public Ticket(String numberTicket, String exhibitionDate, int exhibitionId, int exhibitionPrice, int user_id) {
         this.numberTicket = numberTicket;
-        this.exhibition_date = exhibition_date;
-        this.exhibition_name = exhibition_name;
+        this.exhibitionDate = exhibitionDate;
+        this.exhibitionId = exhibitionId;
+        this.exhibitionPrice = exhibitionPrice;
+        this.user_id = user_id;
     }
 
-    public Ticket(String numberTicket, String exhibition_date, String exhibition_name, int exhibition_price, int user_id) {
+    public Ticket(String numberTicket, String exhibitionDate, String exhibitionName) {
         this.numberTicket = numberTicket;
-        this.exhibition_date = exhibition_date;
-        this.exhibition_name = exhibition_name;
-        this.exhibition_price = exhibition_price;
+        this.exhibitionDate = exhibitionDate;
+        this.exhibitionName = exhibitionName;
+    }
+
+    public Ticket(String numberTicket, String exhibitionDate, String exhibitionName, int exhibitionPrice, int user_id) {
+        this.numberTicket = numberTicket;
+        this.exhibitionDate = exhibitionDate;
+        this.exhibitionName = exhibitionName;
+        this.exhibitionPrice = exhibitionPrice;
         this.user_id = user_id;
+    }
+
+
+    public int getExhibitionId() {
+        return exhibitionId;
+    }
+
+    public void setExhibitionId(int exhibitionId) {
+        this.exhibitionId = exhibitionId;
+    }
+
+    public String getExhibitionDate() {
+        return exhibitionDate;
+    }
+
+    public void setExhibitionDate(String exhibitionDate) {
+        this.exhibitionDate = exhibitionDate;
+    }
+
+    public String getExhibitionName() {
+        return exhibitionName;
+    }
+
+    public void setExhibitionName(String exhibitionName) {
+        this.exhibitionName = exhibitionName;
+    }
+
+    public int getExhibitionPrice() {
+        return exhibitionPrice;
+    }
+
+    public void setExhibitionPrice(int exhibitionPrice) {
+        this.exhibitionPrice = exhibitionPrice;
     }
 
     public long getId() {
@@ -41,28 +83,13 @@ public class Ticket {
         this.numberTicket = numberTicket;
     }
 
-    public String getDate() {
-        return exhibition_date;
-    }
-
-    public void setDate(String date) {
-        this.exhibition_date = date;
-    }
 
     public String getName() {
-        return exhibition_name;
+        return exhibitionName;
     }
 
     public void setName(String name) {
-        this.exhibition_name = name;
-    }
-
-    public int getPrice() {
-        return exhibition_price;
-    }
-
-    public void setPrice(int price) {
-        this.exhibition_price = price;
+        this.exhibitionName = name;
     }
 
     public int getUser_id() {
@@ -78,9 +105,9 @@ public class Ticket {
         return "Ticket{" +
                 "id=" + id +
                 ", numberTicket=" + numberTicket +
-                ", date='" + exhibition_date + '\'' +
-                ", name='" + exhibition_name + '\'' +
-                ", price=" + exhibition_price +
+                ", date='" + exhibitionDate + '\'' +
+                ", name='" + exhibitionName + '\'' +
+                ", price=" + exhibitionPrice +
                 ", user_id=" + user_id +
                 '}';
     }

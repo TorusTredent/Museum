@@ -24,20 +24,29 @@ public class RegistrationWServiceImp implements RegistrationWService{
     }
 
     @Override
-    public void registrationNewUser(List<TextField> list, List<RadioButton> listOfRadButton) {
-        String firstName = list.get(0).getText().trim();
-        String lastName = list.get(1).getText().trim();
-        String userName = list.get(2).getText().toLowerCase();
-        String password = list.get(3).getText().trim();
-        String mobileNumber = list.get(5).getText().replaceAll("\\s+","");
+    public boolean checkPasswordFields(TextField password, TextField repPassword) {
+        String passwordStr = password.getText();
+        String repPasswordStr = repPassword.getText();
+
+        return passwordStr.equals(repPasswordStr);
+    }
+
+    @Override
+    public void registrationNewUser(TextField login, TextField mobileNumber, TextField firstName, TextField lastName,
+                                    TextField password, RadioButton male, RadioButton female) {
+        String firstNameStr = firstName.getText().trim();
+        String lastNameStr = lastName.getText().trim();
+        String userName = login.getText().toLowerCase();
+        String passwordStr = password.getText().trim();
+        String mobileNumberStr = mobileNumber.getText().replaceAll("\\s+","");
         String gender = "";
-        if(listOfRadButton.get(0).isPressed()) {
+        if(male.isPressed()) {
             gender = "мужской";
         } else {
             gender = "женский";
         }
 
-        User user = new User(firstName, lastName, userName, password, gender, mobileNumber);
+        User user = new User(firstNameStr, lastNameStr, userName, passwordStr, gender, mobileNumberStr);
 
         RegistrationWRepository.registrationUser(user);
     }
@@ -52,5 +61,11 @@ public class RegistrationWServiceImp implements RegistrationWService{
     public void loginInAccount(Button button) {
         String address = "/sample/view/personal/WindowPersonal.fxml";
         ControllerHelper.updateWindow(button, address);
+    }
+
+    @Override
+    public int getUserId(TextField username) {
+        String login = username.getText().toLowerCase();
+        return RegistrationWRepository.getUserId(login);
     }
 }

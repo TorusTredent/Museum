@@ -2,6 +2,7 @@ package sample.repository;
 
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
+import sample.entity.TableClassPersonalArea;
 import sample.entity.Ticket;
 import sample.entity.User;
 import sample.repository.configs.Configs;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class PersonalAreaRepository extends Configs {
 
-    public static ObservableList<Ticket> getData(ObservableList<Ticket> ticket) {
+    public static ObservableList<TableClassPersonalArea> getData(ObservableList<TableClassPersonalArea> ticket) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             try (Connection connection = DriverManager.getConnection(url, username, password)) {
@@ -25,7 +26,7 @@ public class PersonalAreaRepository extends Configs {
                 try (Statement statement = connection.createStatement()) {
                     ResultSet rs = statement.executeQuery(query);
                     while(rs.next()) {
-                        ticket.add(new Ticket(rs.getString(1), rs.getString(2), rs.getString(3)));
+                        ticket.add(new TableClassPersonalArea(rs.getString(1), rs.getString(2), rs.getString(3)));
                     }
                     return ticket;
                 }

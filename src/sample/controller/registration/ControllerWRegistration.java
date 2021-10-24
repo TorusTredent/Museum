@@ -1,19 +1,17 @@
 package sample.controller.registration;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import sample.animations.Shake;
+import sample.entity.User;
 import sample.service.imp.RegistrationWServiceImp;
-import sample.verification.FieldVerification;
 
 public class ControllerWRegistration {
+
+    @FXML
+    private Label label;
 
     @FXML
     private ResourceBundle resources;
@@ -51,34 +49,28 @@ public class ControllerWRegistration {
     @FXML
     private Button backToSingUpRWButton;
 
-
+    private final RegistrationWServiceImp register = new RegistrationWServiceImp();
 
     @FXML
     void initialize() {
         enterRWButton.setOnAction(event -> {
-            FieldVerification fieldVerification = new FieldVerification();
-            RegistrationWServiceImp register = new RegistrationWServiceImp();
-
-            List<TextField> listOfField = new ArrayList<>();
-            listOfField.add(firstNameRWField);
-            listOfField.add(lastNameRWField);
-            listOfField.add(userNameRWField);
-            listOfField.add(passwordRWField);
-            listOfField.add(passwordRepRWField);
-            listOfField.add(mobileNumberRegW);
-
-            List<RadioButton> listOfRadButton = new ArrayList<>();
-            listOfRadButton.add(maleRWRadioButton);
-            listOfRadButton.add(femaleRWRadioButton);
-
-            if (fieldVerification.checkRegistrationFields(listOfField)) {
-                System.out.println("Поля пустые");
+            if (!checkFieldsForNull(userNameRWField, mobileNumberRegW, passwordRWField, passwordRepRWField,
+                    firstNameRWField, lastNameRWField)) {
+                setLabelRed("Введены не все значения");
             } else {
-                if (register.checkUniqFields(userNameRWField, mobileNumberRegW)) {
-                    register.registrationNewUser(listOfField, listOfRadButton);
-                    register.loginInAccount(enterRWButton);
+                if (!register.checkUniqFields(userNameRWField, mobileNumberRegW)) {
+                    setLabelRedShake(userNameRWField, "");
+                    setLabelRedShake(mobileNumberRegW, "Данные уже используются");
                 } else {
-                    shakeField();
+                    if (!register.checkPasswordFields(passwordRWField, passwordRepRWField)) {
+                        setLabelRedShake(passwordRWField, "");
+                        setLabelRedShake(passwordRepRWField, "Пароли не совпали");
+                    } else {
+                        register.registrationNewUser(userNameRWField, mobileNumberRegW,firstNameRWField,
+                                lastNameRWField, passwordRWField, maleRWRadioButton, femaleRWRadioButton);
+                        User.setId(register.getUserId(userNameRWField));
+                        register.loginInAccount(enterRWButton);
+                    }
                 }
             }
         });
@@ -89,10 +81,39 @@ public class ControllerWRegistration {
         });
     }
 
-    private void shakeField() {
-        Shake userName = new Shake(userNameRWField);
-        Shake mobileNumber = new Shake(mobileNumberRegW);
-        userName.playAnim();
-        mobileNumber.playAnim();
+
+
+    private void shakeField(TextField textField) {
+        Shake shake = new Shake(textField);
+        shake.playAnim();
+    }
+
+    private void setLabelRedShake(TextField textField, String str) {
+        shakeField(textField);
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
+    }
+
+    private void setLabelRed(String str) {
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
+    }
+
+
+    private boolean checkFieldsForNull(TextField loginField, TextField mobileTextField, TextField passwordField,
+                                       TextField firstNameField, TextField lastNameField, TextField repPasswordField) {
+        String login = loginField.getText();
+        String mobile = mobileTextField.getText();
+        String password = passwordField.getText();
+        String repPassword = repPasswordField.getText();
+        String firstName = firstNameField.getText();
+        String lastName = lastNameField.getText();
+
+        if (login != null && mobile != null && password != null && repPassword != null && firstName != null
+                && lastName != null) {
+            return !login.isEmpty() && !mobile.isEmpty() && !password.isEmpty() && !repPassword.isEmpty() &&
+                    !firstName.isEmpty() && !lastName.isEmpty();
+        }
+        return false;
     }
 }
