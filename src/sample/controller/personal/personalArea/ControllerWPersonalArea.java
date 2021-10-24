@@ -125,11 +125,7 @@ public class ControllerWPersonalArea {
         });
 
         mobileNumberTextField.setOnAction(actionEvent -> {
-            if (personal.checkMobileNumber(mobileNumberTextField)) {
-                acceptButton.setVisible(true);
-            } else {
-                setLabelRedShake(mobileNumberTextField, "Номер используется");
-            }
+            acceptButton.setVisible(true);
         });
 
         maleRadioButton.setOnAction(actionEvent -> {

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.singIn.ControllerWSingUp">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #252a34;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.singIn.ControllerWSingUp">
     <children>
         <AnchorPane layoutY="94.0" prefHeight="306.0" prefWidth="800.0" style="-fx-background-color: #08d9d6;">
             <children>
@@ -37,6 +37,11 @@
                         <Font name="Bookman Old Style" size="19.0" />
                     </font>
                 </Button>
+            <Label fx:id="label" alignment="CENTER" layoutX="209.0" layoutY="253.0" prefHeight="38.0" prefWidth="382.0" textFill="#1b1b1b">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
         <Label layoutX="268.0" prefHeight="74.0" prefWidth="275.0" text="Museum" textFill="#08d9d6">

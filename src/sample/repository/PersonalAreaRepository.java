@@ -3,7 +3,6 @@ package sample.repository;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 import sample.entity.TableClassPersonalArea;
-import sample.entity.Ticket;
 import sample.entity.User;
 import sample.repository.configs.Configs;
 import sample.repository.configs.Const;

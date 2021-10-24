@@ -6,14 +6,15 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
+import sample.animations.Shake;
 import sample.service.imp.SingUpServiceImp;
 
 public class ControllerWSingUp {
+
+    @FXML
+    private Label label;
 
     @FXML
     private ResourceBundle resources;
@@ -54,7 +55,8 @@ public class ControllerWSingUp {
             listOfFields.add(passwordField);
             SingUpServiceImp sing = new SingUpServiceImp();
             if (!sing.checkInputData(listOfFields)) {
-                System.out.println("Не совпало с бд");
+                setLabelRedShake(loginField, "");
+                setLabelRedShake(passwordField, "Нет такого пользователя");
             } else {
                 sing.loginInAccount(loginButton);
             }
@@ -64,6 +66,17 @@ public class ControllerWSingUp {
             SingUpServiceImp sing = new SingUpServiceImp();
             sing.openRegistrationW(registrationButton);
         });
+    }
+
+    private void shakeField(TextField textField) {
+        Shake shake = new Shake(textField);
+        shake.playAnim();
+    }
+
+    private void setLabelRedShake(TextField textField, String str) {
+        shakeField(textField);
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
     }
 }
 

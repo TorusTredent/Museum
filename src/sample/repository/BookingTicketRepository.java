@@ -108,26 +108,6 @@ public class BookingTicketRepository extends Configs {
         }
     }
 
-    public static void updateTicketBasket(String date, int exhibitionId, int amountTicket) {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection connection = DriverManager.getConnection(url, username, password)) {
-
-                String query = "UPDATE " + Const.TICKETS_IN_BASKET_TABLE + " SET " + Const.TICKET_IN_BASKET_AMOUNT +
-                        " = " + amountTicket + " WHERE " + Const.TICKET_IN_BASKET_EXHIBITION_ID + " = " + exhibitionId +
-                        " AND " + Const.TICKET_IN_BASKET_DATA + " = '" + date + "'";
-
-                try (Statement statement = connection.createStatement()) {
-                    statement.execute(query);
-                }
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public static  List<String> getLastNumberTicket() {
         List<String> list = new ArrayList<>();
         try {
@@ -217,29 +197,4 @@ public class BookingTicketRepository extends Configs {
         }
         return 0;
     }
-
-
-    public static void addBalance(String newBalance) {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection connection = DriverManager.getConnection(url, username, password)) {
-
-                String query = "UPDATE " + Const.USER_TABLE + " SET " + Const.USER_BALANCE +
-                        " = ? WHERE " + Const.USER_ID + " = ?";
-
-                try (PreparedStatement prep = connection.prepareStatement(query)) {
-                    prep.setString(1, newBalance);
-                    prep.setLong(2, User.getId());
-                    prep.execute();
-                }
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
 }

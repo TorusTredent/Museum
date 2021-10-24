@@ -26,4 +26,5 @@ public interface PersonalAreaService {
     boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
                              List<String> listOfOldTextField);
      boolean checkMobileNumber(TextField mobileNumber);
+     boolean checkLogin(TextField login);
 }

@@ -12,7 +12,6 @@ public class Const {
     public static final String USER_GENDER = "gender";
     public static final String USER_MOBILENUMBER = "mobileNumber";
     public static final String USER_BALANCE = "balance";
-    public static final String USER_TICKET_ID = "ticket_id";
 
 
     public static final String TICKETS_TABLE = "tickets";

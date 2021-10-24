@@ -58,6 +58,12 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
     }
 
     @Override
+    public boolean checkLogin(TextField login) {
+        String username = login.getText();
+        return PersonalAreaRepository.checkUsername(username);
+    }
+
+    @Override
     public boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
                                     List<String> listOfOldTextField) {
 
