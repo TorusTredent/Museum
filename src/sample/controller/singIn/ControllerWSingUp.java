@@ -58,7 +58,11 @@ public class ControllerWSingUp {
                 setLabelRedShake(loginField, "");
                 setLabelRedShake(passwordField, "Нет такого пользователя");
             } else {
-                sing.loginInAccount(loginButton);
+                if (sing.getStatus(loginField.getText()).equals("admin")) {
+                    sing.loginInAccountAdmin(loginButton);
+                } else {
+                    sing.loginInAccount(loginButton);
+                }
             }
         });
 

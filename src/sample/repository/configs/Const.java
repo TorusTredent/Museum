@@ -1,6 +1,15 @@
 package sample.repository.configs;
 
+import sample.entity.User;
+
 public class Const {
+
+
+    public static final String getData = "SELECT " + Const.TICKET_IN_BASKET_NUMBER + ", " + Const.EXHIBITION_NAME + ", " +
+            Const.TICKET_IN_BASKET_DATA + ", " + Const.TICKET_IN_BASKET_COST + " FROM " +
+            Const.TICKETS_IN_BASKET_TABLE + " LEFT JOIN exhibition e on e.id = tickets_in_basket.exhibition_id" +
+            " WHERE " + Const.TICKET_IN_BASKET_USER_ID + " = " + User.getId() + "";
+
 
     public static final String USER_TABLE = "users";
 

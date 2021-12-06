@@ -9,6 +9,7 @@ public class User {
     private String gender;
     private String mobileNumber;
     private int balance;
+    private String status;
 
     public User() {
     }
@@ -95,7 +96,6 @@ public class User {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-
 
     @Override
     public String toString() {

@@ -81,27 +81,35 @@ public class ControllerBookingTicket {
 
         amountTicketTextField.setOnAction(actionEvent -> {
             String numberTicket = amountTicketTextField.getText();
-            if (exhibitionNameTextField.getText().equals("")) {
-                shakeField(exhibitionNameTextField);
-                label.setText("Отсутствует выставка");
-            } else {
-                label.setText("");
-                String total = booking.getCostOfTicket(exhibitionNameTextField.getText(), numberTicket, numberColor);
-                if (total != null) {
-                    costTextField.setText(total);
-                    addToBasketButton.setVisible(true);
+            if (isNumberInteger(numberTicket)) {
+                if (exhibitionNameTextField.getText().equals("")) {
+                    shakeField(exhibitionNameTextField);
+                    setLabelRed("Отсутствует выставка");
                 } else {
-                    label.setText("Неправильный ввод");
-                    costTextField.setText("");
-                    shakeField(amountTicketTextField);
+                    label.setText("");
+                    String total = booking.getCostOfTicket(exhibitionNameTextField.getText(), numberTicket, numberColor);
+                    if (total != null) {
+                        costTextField.setText(total);
+                        addToBasketButton.setVisible(true);
+                    } else {
+                        setLabelRed("Неправильный ввод");
+                        costTextField.setText("");
+                        shakeField(amountTicketTextField);
+                    }
                 }
+            } else {
+                setLabelRed("Неправильный ввод");
+                shakeField(amountTicketTextField);
             }
         });
 
         addToBasketButton.setOnAction(actionEvent -> {
             booking.addToBasket(datePicker.getValue(), exhibitionNameTextField.getText(),
                     amountTicketTextField.getText(), costTextField.getText());
-            label.setText("Добавление выполнено");
+            exhibitionNameTextField.setText("");
+            amountTicketTextField.setText("");
+            costTextField.setText("");
+            setLabelGreen("Добавление выполнено");
         });
 
         backToPersonalMenu.setOnAction(actionEvent -> {
@@ -174,7 +182,16 @@ public class ControllerBookingTicket {
     }
 
     private void setLabelGreen(String str) {
-
+        label.setStyle("-fx-text-fill: #097240");
+        label.setText(str);
     }
 
+    private void setLabelRed(String str) {
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
+    }
+
+    private boolean isNumberInteger(String numberTicket) {
+        return numberTicket.matches("[-+]?\\d+");
+    }
 }

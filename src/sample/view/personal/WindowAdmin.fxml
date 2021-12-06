@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #08d9d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerAdmin">
+    <children>
+        <Label fx:id="label" alignment="CENTER" layoutX="124.0" layoutY="14.0" prefHeight="38.0" prefWidth="206.0" textAlignment="CENTER" textFill="RED">
+            <font>
+                <Font name="Bookman Old Style" size="15.0" />
+            </font>
+        </Label>
+        <Text layoutX="335.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Админ" wrappingWidth="130.3999816894531">
+            <font>
+                <Font name="Bookman Old Style" size="29.0" />
+            </font>
+        </Text>
+        <Button fx:id="logOut" contentDisplay="CENTER" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Выйти" textFill="#09ffe5">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tableWithExhibition" layoutX="25.0" layoutY="70.0" prefHeight="278.0" prefWidth="502.0" style="-fx-background-color: #08d9d6;">
+            <columns>
+                <TableColumn fx:id="numberExhibitionColumn" prefWidth="129.5999755859375" text="id" />
+                <TableColumn fx:id="nameExhibitionColumn" prefWidth="173.5999755859375" text="название выставки" />
+                <TableColumn fx:id="dateColumn" prefWidth="104.0" text="дата" />
+                <TableColumn fx:id="costColumn" prefWidth="94.39999999999998" text="цена" />
+            </columns>
+        </TableView>
+        <Button fx:id="removeExhibitionButton" contentDisplay="CENTER" layoutX="620.0" layoutY="122.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="удалить" textFill="#09ffe5">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TextField fx:id="exibitionIdTextField" alignment="CENTER" layoutX="590.0" layoutY="176.0" prefHeight="25.0" prefWidth="166.0" promptText="id выставки" style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #808080;" visible="false">
+            <font>
+                <Font name="Bookman Old Style" size="17.0" />
+            </font>
+        </TextField>
+        <Button fx:id="openWindowAdminExhibitionButton" contentDisplay="CENTER" layoutX="556.0" layoutY="70.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="233.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="Добавить выставку" textFill="#09ffe5">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="acceptChangiesButton" contentDisplay="CENTER" layoutX="584.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: #433656; -fx-background-radius: 12;" text="принять изменения" textFill="#09ffe5" visible="false">
+            <font>
+                <Font name="Bookman Old Style" size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

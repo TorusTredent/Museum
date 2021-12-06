@@ -1,15 +1,13 @@
 package sample.entity;
 
-public class Exhibition {
+public class TableClassAdmin {
     private int id;
     private String name;
     private String date;
     private int price;
 
-    public Exhibition() {
-    }
-
-    public Exhibition(String name, String date, int price) {
+    public TableClassAdmin(int id, String name, String date, int price) {
+        this.id = id;
         this.name = name;
         this.date = date;
         this.price = price;
@@ -45,15 +43,5 @@ public class Exhibition {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "Exhibition{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", date='" + date + '\'' +
-                ", price=" + price +
-                '}';
     }
 }

@@ -9,4 +9,6 @@ public interface SingUpWService {
     boolean checkInputData(List<TextField> listOfFields);
     void loginInAccount(Button loginButton);
     void openRegistrationW(Button registrationButton);
+    void loginInAccountAdmin(Button loginButton);
+    String getStatus(String username);
 }

@@ -33,4 +33,27 @@ public class SingUpWRepository extends Configs {
         }
         return false;
     }
+
+    public static String getStatus(String userName) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            try (Connection connection = DriverManager.getConnection(url, username, password)) {
+
+                String query = "SELECT * FROM "+ Const.USER_TABLE + " WHERE " + Const.USER_USERNAME +
+                        " = '" + userName +"'";
+                try (Statement statement = connection.createStatement()) {
+                    ResultSet rs = statement.executeQuery(query);
+                    if (rs.next()) {
+                        return rs.getString(9);
+                    }
+                    return null;
+                }
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
