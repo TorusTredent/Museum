@@ -5,16 +5,14 @@ public class Exhibition {
     private String name;
     private String date;
     private int price;
-    private int exhibits_id;
 
     public Exhibition() {
     }
 
-    public Exhibition(String name, String date, int price, int exhibits_id) {
+    public Exhibition(String name, String date, int price) {
         this.name = name;
         this.date = date;
         this.price = price;
-        this.exhibits_id = exhibits_id;
     }
 
     public int getId() {
@@ -49,14 +47,6 @@ public class Exhibition {
         this.price = price;
     }
 
-    public int getExhibits_id() {
-        return exhibits_id;
-    }
-
-    public void setExhibits_id(int exhibits_id) {
-        this.exhibits_id = exhibits_id;
-    }
-
     @Override
     public String toString() {
         return "Exhibition{" +
@@ -64,7 +54,6 @@ public class Exhibition {
                 ", name='" + name + '\'' +
                 ", date='" + date + '\'' +
                 ", price=" + price +
-                ", exhibits_id=" + exhibits_id +
                 '}';
     }
 }

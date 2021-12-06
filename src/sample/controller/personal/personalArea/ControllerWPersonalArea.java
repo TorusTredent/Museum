@@ -10,14 +10,17 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
-import sample.entity.Ticket;
+import sample.animations.Shake;
+import sample.entity.TableClassPersonalArea;
 import sample.service.imp.PersonalAreaServiceImp;
 
 public class ControllerWPersonalArea {
 
-    ObservableList<Ticket> ticket = FXCollections.observableArrayList();
+    ObservableList<TableClassPersonalArea> ticket = FXCollections.observableArrayList();
     PersonalAreaServiceImp personal = new PersonalAreaServiceImp();
+
+    @FXML
+    private Label label;
 
     @FXML
     private ResourceBundle resources;
@@ -53,16 +56,16 @@ public class ControllerWPersonalArea {
     public Button acceptButton;
 
     @FXML
-    public TableView<Ticket> table;
+    public TableView<TableClassPersonalArea> table;
 
     @FXML
-    private TableColumn<Ticket, String> columnNumberOfTicket;
+    private TableColumn<TableClassPersonalArea, String> columnNumberOfTicket;
 
     @FXML
-    private TableColumn<Ticket, String> columnDate;
+    private TableColumn<TableClassPersonalArea, String> columnDate;
 
     @FXML
-    private TableColumn<Ticket, String> columnName;
+    private TableColumn<TableClassPersonalArea, String> columnName;
 
     @FXML
     private TextField loginTextField;
@@ -75,6 +78,7 @@ public class ControllerWPersonalArea {
 
     @FXML
     void initialize() {
+        List<String> listOfOldTextField = new ArrayList<>();
 
         loginTextField.setText(personal.takeLoginFromDB());
         firstNameTextField.setText(personal.takeFirstNameFromDB());
@@ -82,16 +86,8 @@ public class ControllerWPersonalArea {
         passwordTextField.setText(personal.takePasswordFromDB());
         mobileNumberTextField.setText(personal.takeMobileNumberFromDB());
 
-        List<TextField> listOfOldTextField = new ArrayList<>();
-        listOfOldTextField.add(firstNameTextField);
-        listOfOldTextField.add(lastNameTextField);
-        listOfOldTextField.add(loginTextField);
-        listOfOldTextField.add(passwordTextField);
-        listOfOldTextField.add(mobileNumberTextField);
-
-        List<RadioButton> listOfOldRadButton = new ArrayList<>();
-        listOfOldRadButton.add(maleRadioButton);
-        listOfOldRadButton.add(femaleRadioButton);
+        listOfOldTextField.add(personal.takeLoginFromDB());
+        listOfOldTextField.add(personal.takeMobileNumberFromDB());
 
         if(personal.takeGenderFromDB().equals("мужской")) {
             maleRadioButton.fire();
@@ -99,9 +95,7 @@ public class ControllerWPersonalArea {
             femaleRadioButton.fire();
         }
 
-        if (personal.tableIsEmpty()) {
-            System.out.println("Таблица пустая");
-        } else {
+        if (!personal.tableIsEmpty()) {
             initializeTicketsTable();
         }
 
@@ -109,7 +103,37 @@ public class ControllerWPersonalArea {
 
         addBalanceButton.setOnAction(event -> {
             personal.openChangeBalanceW(addBalanceButton);
+            acceptButton.setVisible(true);
         });
+
+        loginTextField.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
+        firstNameTextField.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
+        lastNameTextField.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
+        passwordTextField.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
+        mobileNumberTextField.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
+        maleRadioButton.setOnAction(actionEvent -> {
+           acceptButton.setVisible(true);
+        });
+
+        femaleRadioButton.setOnAction(actionEvent -> {
+            acceptButton.setVisible(true);
+        });
+
 
         acceptButton.setOnAction(event -> {
 
@@ -124,11 +148,11 @@ public class ControllerWPersonalArea {
             radioButtonList.add(maleRadioButton);
             radioButtonList.add(femaleRadioButton);
 
-            if(!personal.checkFieldsValue(listOfTextField, radioButtonList, listOfOldTextField, listOfOldRadButton)) {
-                System.out.println("Значения неверны");
-            } else {
+            if(personal.checkFieldsValue(listOfTextField, radioButtonList, listOfOldTextField)) {
                 personal.acceptChanges(listOfTextField, radioButtonList);
                 personal.updateW(acceptButton);
+            } else {
+                setLabelRed("Данные уже используются");
             }
         });
 
@@ -141,12 +165,25 @@ public class ControllerWPersonalArea {
         ticket = personal.getDataFromDb(ticket);
 
         columnNumberOfTicket.setCellValueFactory(new PropertyValueFactory<> ("numberTicket"));
-        columnDate.setCellValueFactory(new PropertyValueFactory<> ("date"));
-        columnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        columnDate.setCellValueFactory(new PropertyValueFactory<> ("data"));
+        columnName.setCellValueFactory(new PropertyValueFactory<>("exhibitionName"));
 
         table.setItems(ticket);
     }
 
-    private void updateW() {
+    private void shakeField(TextField textField) {
+        Shake shake = new Shake(textField);
+        shake.playAnim();
+    }
+
+    private void setLabelRedShake(TextField textField, String str) {
+        shakeField(textField);
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
+    }
+
+    private void setLabelRed(String str) {
+        label.setStyle("-fx-text-fill: #fa0000");
+        label.setText(str);
     }
 }

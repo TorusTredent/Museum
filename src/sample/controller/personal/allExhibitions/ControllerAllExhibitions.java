@@ -2,12 +2,17 @@ package sample.controller.personal.allExhibitions;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import sample.service.imp.AllExhibitionsServiceImp;
 
 public class ControllerAllExhibitions {
+
+    @FXML
+    private Button openPaulRegoWButton;
 
     @FXML
     private ResourceBundle resources;
@@ -15,35 +20,6 @@ public class ControllerAllExhibitions {
     @FXML
     private URL location;
 
-    @FXML
-    private TextField userNameRWField;
-
-    @FXML
-    private TextField userNameRWField1;
-
-    @FXML
-    private TextField userNameRWField11;
-
-    @FXML
-    private TextField userNameRWField2;
-
-    @FXML
-    private TextField userNameRWField111;
-
-    @FXML
-    private TextField userNameRWField21;
-
-    @FXML
-    private TextField userNameRWField1111;
-
-    @FXML
-    private TextField userNameRWField211;
-
-    @FXML
-    private TextField userNameRWField11111;
-
-    @FXML
-    private TextField userNameRWField2111;
 
     @FXML
     private Button openStreetArtWButton;
@@ -76,7 +52,29 @@ public class ControllerAllExhibitions {
         });
 
         openModernisityWButton.setOnAction(actionEvent -> {
-            allExhs.openNewW(openModernisityWButton,"/sample/view/personal/allExhibitions/exhibitions/WindowModernisty.fxml");
+            allExhs.openNewW(openModernisityWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowModernisty.fxml");
+        });
+
+        openCollectShukiniWButton.setOnAction(actionEvent -> {
+            allExhs.openNewW(openCollectShukiniWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowCollectionShukini.fxml");
+        });
+
+        openGalSatchiWButton.setOnAction(actionEvent -> {
+            allExhs.openNewW(openGalSatchiWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowGalereyaSatchi.fxml");
+        });
+
+        openPaulRegoWButton.setOnAction(actionEvent -> {
+            allExhs.openNewW(openGalSatchiWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowPaulRego.fxml");
+        });
+
+        backToPersonalWButton.setOnAction(actionEvent -> {
+            allExhs.backToPersonalW(backToPersonalWButton);
+        });
+
+        backToPersonalWButton.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode().equals(KeyCode.ESCAPE)) {
+                allExhs.backToPersonalW(backToPersonalWButton);
+            }
         });
     }
 }

@@ -34,9 +34,19 @@ public class SingUpServiceImp implements SingUpWService {
     }
 
     @Override
+    public void loginInAccountAdmin(Button loginButton) {
+        String window = "/sample/view/personal/admin/WindowAdmin.fxml";
+        ControllerHelper.updateWindow(loginButton, window);
+    }
+
+    @Override
     public void openRegistrationW(Button registrationButton) {
         String window = "/sample/view/registration/WindowRegistration.fxml";
         ControllerHelper.updateWindow(registrationButton, window);
     }
 
+    @Override
+    public String getStatus(String username) {
+        return SingUpWRepository.getStatus(username);
+    }
 }

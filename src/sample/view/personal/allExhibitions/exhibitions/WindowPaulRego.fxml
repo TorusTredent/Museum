@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #5ECBE0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerPaulRego">
+    <children>
+        <ScrollPane layoutX="537.0" layoutY="-3.0" prefHeight="412.0" prefWidth="262.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="742.0" prefWidth="246.0" style="-fx-background-color: #499CAD;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/paul_rego/1156640646.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/paul_rego/243120944.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/paul_rego/85591088_original.jpg" />
+                     </image></ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="60.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/paul_rego/85579873_original.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #295861; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="back" textFill="WHITE">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TextArea editable="false" layoutX="47.0" layoutY="211.0" prefHeight="154.0" prefWidth="462.0" style="-fx-background-color: #252a34;" text="Выставка, подготовленная совместно с Регу и ее сыном Ником Уиллингом, проливает свет на общественно-политический контекст, из которого растет творчество художницы, и на разнообразные источники, материалы и объекты, с которыми она работает уже более 60 лет. Экспозиция Тейт дополнила и расширила выставку Регу, состоявшуюся в 2019 году и посвященную главным образом ее политическим картинам. Благодаря щедрости владельцев, предоставивших произведения художницы во временное пользование, и возможности отвести под экспозицию значительное пространство Тейт удалось подготовить богатый материал, включающий редко экспонируемые вещи, и уделить внимание всем этапам ее карьеры. Выставка исследует влияние на ее творчество юнгианского психоанализа, к которому Регу обратилась в 1966 году, и интерес художницы к литературе и фольклору. Она также рассказывает о разоблачительной выставке в Serpentine Gallery в 1988-м и о резиденции в Национальной галерее в 1990-м, которая заставила ее обратиться к вопросу об отсутствии женщин на исторических полотнах." wrapText="true">
+            <font>
+                <Font name="Century" size="11.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="132.0" fitWidth="286.0" layoutX="240.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../assets/paul_rego/paula-rego.jpg!Portrait.jpg" />
+            </image>
+        </ImageView>
+        <Button accessibleRole="TEXT_FIELD" layoutX="196.0" layoutY="15.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="211.0" style="-fx-background-color: #295861; -fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: black;" text="Картины Паулы Рего" textFill="WHITE">
+            <font>
+                <Font name="Bookman Old Style" size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

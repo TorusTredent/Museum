@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #a9e4d7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerCollectionShukini">
+    <children>
+        <ScrollPane layoutX="537.0" layoutY="-2.0" prefHeight="409.0" prefWidth="262.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="726.0" prefWidth="246.0" style="-fx-background-color: #63b4b8;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/collec_shukini/original_1b48ac5500d0883c097def6f311c619b.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/collec_shukini/f73f1f82-e143-4a78-91d6-193d6c8bbb0e.height-1290.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="154.0" fitWidth="179.0" layoutX="70.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/collec_shukini/z1v9-xmnIboKf_vS_uiKcw.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/collec_shukini/detail_picture.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #63b4b8; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="back" textFill="#252a34">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TextArea editable="false" layoutX="47.0" layoutY="215.0" prefHeight="153.0" prefWidth="462.0" style="-fx-background-color: #252a34;" text="Музей покажет одну из наиболее значительных коллекций искусства европейского модернизма, охватывающую важнейшие художественные течения конца XIX – начала ХХ века. Беспрецедентная по масштабу и содержанию выставка займет практически все пространство музея. Проект представит историю формирования коллекции Сергея Щукина через его личность, биографию семьи и культурно-исторический контекст, который помогут воссоздать собрания братьев – Петра, Дмитрия и Ивана. В экспозицию войдут знаковые произведения Клода Моне, Пьера Огюста Ренуара, Поля Сезанна, Поля Гогена, Винсента ван Гога, Анри Матисса, Пабло Пикассо и других мастеров. Задача выставки – показать одно из крупнейших мировых собраний максимально полно." wrapText="true">
+            <font>
+                <Font name="Century" size="11.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="132.0" fitWidth="286.0" layoutX="246.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../assets/collec_shukini/content_02shchukin_kron.jpg" />
+            </image>
+        </ImageView>
+        <Button accessibleRole="TEXT_FIELD" layoutX="193.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #63b4b8; -fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: black;" text="Коллекция Щукини" textFill="#4b3869">
+            <font>
+                <Font name="Bookman Old Style" size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

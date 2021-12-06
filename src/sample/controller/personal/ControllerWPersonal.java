@@ -9,6 +9,15 @@ import sample.service.imp.PersonalWServiceImp;
 public class ControllerWPersonal {
 
     @FXML
+    private Button aboutMuseumButton;
+
+    @FXML
+    private Button checkPictPauloRegoWButton;
+
+    @FXML
+    private Button checkStreetArtWButton ;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -24,19 +33,10 @@ public class ControllerWPersonal {
     private Button personalAreaPersWButton;
 
     @FXML
-    private Button comingExPersWButton;
-
-    @FXML
     private Button orderTicketsPersWButton;
 
     @FXML
     private Button exitPersWButton;
-
-    @FXML
-    private Button checkPictExPersWButton;
-
-    @FXML
-    private Button checkDecorExPersWButton;
 
     @FXML
     void initialize() {
@@ -49,27 +49,23 @@ public class ControllerWPersonal {
         allExhibitionsPersWButton.setOnAction(event -> {
            person.openNewW(allExhibitionsPersWButton, "/sample/view/personal/allExhibitions/WindowAllExhibitions.fxml");
         });
-//
-//        comingExPersWButton.setOnAction(event -> {
-//            person.openComingExhibitW(comingExPersWButton);
-//        });
-//
-//        orderTicketsPersWButton.setOnAction(event -> {
-//            person.openOrderTicketsW(orderTicketsPersWButton);
-//        });
-//
-//        basketPersWButton.setOnAction(event -> {
-//            person.openBasketW(basketPersWButton);
-//        });
-//
-//        checkPictExPersWButton.setOnAction(event -> {
-//            person.checkPictW(checkPictExPersWButton);
-//        });
-//
-//        checkDecorExPersWButton.setOnAction(event -> {
-//            person.checkDecorW(checkDecorExPersWButton);
-//        });
-//
+
+        orderTicketsPersWButton.setOnAction(event -> {
+            person.openNewW(orderTicketsPersWButton, "/sample/view/personal/bookingTicket/WindowBookingTicket.fxml");
+        });
+
+        basketPersWButton.setOnAction(event -> {
+            person.openNewW(basketPersWButton, "/sample/view/personal/basket/WindowBasket.fxml");
+        });
+
+        checkStreetArtWButton.setOnAction(event -> {
+            person.openNewW(basketPersWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowStreetArt.fxml");
+        });
+
+        checkPictPauloRegoWButton.setOnAction(event -> {
+            person.openNewW(basketPersWButton, "/sample/view/personal/allExhibitions/exhibitions/WindowPaulRego.fxml");
+        });
+
         exitPersWButton.setOnAction(event -> {
             person.backToSingUpW(exitPersWButton);
         });

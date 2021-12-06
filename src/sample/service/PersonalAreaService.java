@@ -4,7 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import sample.entity.Ticket;
+import sample.entity.TableClassPersonalArea;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public interface PersonalAreaService {
     void acceptChanges(List<TextField> listOfTextField, List<RadioButton> radioButtonList);
     void updateW(Button button);
     void openPersonalW(Button button);
-    ObservableList<Ticket> getDataFromDb(ObservableList<Ticket> ticket);
+    ObservableList<TableClassPersonalArea> getDataFromDb(ObservableList<TableClassPersonalArea> ticket);
     String takeBalanceFromDB();
     String takeFirstNameFromDB();
     String takeLastNameFromDB();
@@ -23,5 +23,7 @@ public interface PersonalAreaService {
     String takeMobileNumberFromDB();
     String takeGenderFromDB();
     boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
-                             List<TextField> listOfOldTextField, List<RadioButton> oldRadioButtonList);
+                             List<String> listOfOldTextField);
+     boolean checkMobileNumber(TextField mobileNumber);
+     boolean checkLogin(TextField login);
 }

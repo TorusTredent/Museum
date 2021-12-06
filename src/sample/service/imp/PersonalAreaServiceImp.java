@@ -6,7 +6,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import sample.animations.Shake;
 import sample.controller.ControllerHelper;
-import sample.entity.Ticket;
+import sample.entity.TableClassPersonalArea;
 import sample.repository.PersonalAreaRepository;
 import sample.service.PersonalAreaService;
 
@@ -34,11 +34,10 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
             gender = "женский";
         }
         PersonalAreaRepository.updateUserDate(listOfTextField, gender);
-        System.out.println("Выполенено обновление");
     }
 
     @Override
-    public ObservableList<Ticket> getDataFromDb(ObservableList<Ticket> ticket) {
+    public ObservableList<TableClassPersonalArea> getDataFromDb(ObservableList<TableClassPersonalArea> ticket) {
         return PersonalAreaRepository.getData(ticket);
     }
 
@@ -49,32 +48,47 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
     }
 
     @Override
+    public boolean checkMobileNumber(TextField mobileNumber) {
+        String mobile = mobileNumber.getText().replaceAll("\\s+", "");
+        if (mobile.length() == 13) {
+            return  PersonalAreaRepository.checkMobileNumber(mobile);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean checkLogin(TextField login) {
+        String username = login.getText();
+        return PersonalAreaRepository.checkUsername(username);
+    }
+
+    @Override
     public boolean checkFieldsValue(List<TextField> listOfTextField, List<RadioButton> radioButtonList,
-                                    List<TextField> listOfOldTextField, List<RadioButton> oldRadioButtonList) {
-        if(listOfTextField.get(4).getText().length() > 13) {
+                                    List<String> listOfOldTextField) {
+
+        if (listOfTextField.get(4).getText().length() > 13) {
             shakeMobileField(listOfTextField.get(4));
             return false;
         }
 
         String newUserName = listOfTextField.get(2).getText().toLowerCase();
-        String newMobileNumber = listOfTextField.get(4).getText().replaceAll("\\s+","");
+        String newMobileNumber = listOfTextField.get(4).getText().replaceAll("\\s+", "");
 
-        String oldUserName = listOfOldTextField.get(2).getText().toLowerCase();
-        String oldMobileNumber = listOfOldTextField.get(4).getText().replaceAll("\\s+","");
+        String oldUserName = listOfOldTextField.get(0).toLowerCase().trim();
+        String oldMobileNumber = listOfOldTextField.get(1).replaceAll("\\s+", "");
 
-        if(!newUserName.equals(oldUserName)) {
-            if (PersonalAreaRepository.checkUsername(newUserName)) {
-                if (!newMobileNumber.equals(oldMobileNumber)) {
-                    return PersonalAreaRepository.checkMobileNumber(newMobileNumber);
-                } else {
-                    return true;
-                }
-            } else {
+        if (!newUserName.equals(oldUserName)) {
+            if (!PersonalAreaRepository.checkUsername(newUserName)) {
                 return false;
             }
-        } else {
-            return newMobileNumber.equals(oldMobileNumber);
         }
+
+        if (!newMobileNumber.equals(oldMobileNumber)) {
+            return PersonalAreaRepository.checkMobileNumber(newMobileNumber);
+        }
+        return true;
+
     }
 
     @Override
@@ -122,6 +136,7 @@ public class PersonalAreaServiceImp implements PersonalAreaService {
         Shake mobileField = new Shake(textField);
         mobileField.playAnim();
     }
+
     private void shakeLoginField(TextField textField) {
         Shake loginField = new Shake(textField);
         loginField.playAnim();

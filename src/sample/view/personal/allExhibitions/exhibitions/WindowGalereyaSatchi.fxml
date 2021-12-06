@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #9bbcff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.allExhibitions.exhibitions.ControllerGalereyaSatchi">
+    <children>
+        <ScrollPane layoutX="537.0" prefHeight="409.0" prefWidth="262.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="710.0" prefWidth="246.0" style="-fx-background-color: #d2d2ff;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/galereya_satchi/0qgsirnnxklc0c0k4kk8okso0.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/galereya_satchi/Saatchi-Gallery.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="154.0" fitWidth="179.0" layoutX="34.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/galereya_satchi/0z8ccxe937z4gc4skkw400gkc.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../assets/galereya_satchi/02022014_6.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="backToAllExhibWButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="87.0" style="-fx-background-color: #6862c3; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="back" textFill="WHITE">
+            <font>
+                <Font name="Bookman Old Style" size="19.0" />
+            </font>
+        </Button>
+        <TextArea editable="false" layoutX="47.0" layoutY="215.0" prefHeight="153.0" prefWidth="462.0" style="-fx-background-color: #252a34;" text=" Высоченные потолки и просторные залы, книжная лавка, бар и ресторан и - периодически меняющаяся экспозиция. Скажем, в 2009 году Саатчи представил здесь выставку &quot;Новое искусство Ближнего Востока&quot;. Страх и изумление вызвала тогда, среди прочего, инсталляция &quot;Дом престарелых&quot;: около десятка инвалидных кресел с сидящими в них самыми разными людьми-куклами медленно перемещаются по залу. Сделано это было настолько реалистично, что заставляло посетителей трепетать.&#10;&#10;Изумить, поразить, побудить к размышлениям - каждой экспозиции в галерее Саатчи удается это сделать. А для художников, чьи работы попадают в поле зрения и интереса Чарльза Саатчи, организуемая в галерее выставка становится трамплином в карьере." wrapText="true">
+            <font>
+                <Font name="Century" size="11.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="132.0" fitWidth="286.0" layoutX="246.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../assets/galereya_satchi/galereya_saatchi2.jpg" />
+            </image>
+        </ImageView>
+        <Button accessibleRole="TEXT_FIELD" layoutX="202.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #6862c3; -fx-border-radius: 12; -fx-background-radius: 12; -fx-border-color: black;" text="Галерея Сатчи" textFill="WHITE">
+            <font>
+                <Font name="Bookman Old Style" size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.ControllerWPersonal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.personal.ControllerWPersonal">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #09ffe5;">
          <children>
@@ -40,7 +40,7 @@
                         <Font name="Bookman Old Style" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="orderTicketsPersWButton" layoutX="41.0" layoutY="111.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="177.0" style="-fx-background-color: #132743;" text="Заказ билета" textFill="WHITE">
+                  <Button fx:id="orderTicketsPersWButton" layoutX="41.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="177.0" style="-fx-background-color: #132743;" text="Заказ билета" textFill="WHITE">
                      <font>
                         <Font name="Bookman Old Style" size="18.0" />
                      </font>
@@ -50,37 +50,52 @@
                         <Font name="Bookman Old Style" size="18.0" />
                      </font>
                   </Button>
-                  <Line endX="100.0" layoutX="131.0" layoutY="200.0" startX="-100.0" stroke="#8b8bcc" />
+                  <Line endX="100.0" layoutX="132.0" layoutY="176.0" startX="-100.0" stroke="#8b8bcc" />
                   <Line endX="113.00001525878906" endY="119.99998474121094" layoutX="142.0" layoutY="56.0" startX="113.00001525878906" startY="-9.599987030029297" stroke="#8b8bcc" />
-                  <Button fx:id="aboutMuseumButton" layoutX="41.0" layoutY="159.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="177.0" style="-fx-background-color: #132743;" text="О музее" textFill="WHITE">
-                     <font>
-                        <Font name="Bookman Old Style" size="18.0" />
-                     </font>
-                  </Button>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="150.0" fitWidth="219.0" layoutX="299.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="219.0" layoutX="589.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../assets/Kartiny.jpg" />
+                  <Image url="@../../assets/paul_rego/paula-rego.jpg!Portrait.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="142.0" fitWidth="266.0" layoutX="572.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="142.0" fitWidth="266.0" layoutX="291.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../assets/Luvr_Korona.jpg" />
+                  <Image url="@../../assets/street_art/brooklyn-street-art-Capture-the-Street-River-tales-10-19-web-7.jpg" />
                </image>
             </ImageView>
-            <TextField editable="false" layoutX="288.0" layoutY="284.0" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: #00adb5;" text="Картины великих художников">
+            <TextField editable="false" layoutX="531.0" layoutY="283.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #00adb5;" text="Картины Паулы Рего">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </TextField>
-            <Button fx:id="checkPictExPersWButton" layoutX="373.0" layoutY="321.0" mnemonicParsing="false" style="-fx-background-color: #00ffbb; -fx-border-radius: 10; -fx-border-color: #000000;" text="просмотр" />
-            <TextField editable="false" layoutX="581.0" layoutY="284.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #00adb5;" text="Украшения королевы">
+            <Button fx:id="checkPictPauloRegoWButton" layoutX="634.0" layoutY="320.0" mnemonicParsing="false" style="-fx-background-color: #00ffbb; -fx-border-radius: 10; -fx-border-color: #000000;" text="просмотр" />
+            <TextField editable="false" layoutX="312.0" layoutY="283.0" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #00adb5;" text="Street art">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>
             </TextField>
-            <Button fx:id="checkDecorExPersWButton" layoutX="631.0" layoutY="321.0" mnemonicParsing="false" style="-fx-background-color: #00ffbb; -fx-border-radius: 10; -fx-border-color: #000000;" text="просмотр" />
+            <TextField alignment="CENTER" editable="false" layoutX="415.0" layoutY="280.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #00ffbb; -fx-background-radius: 12; -fx-border-radius: 12;" text="Идет!">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </TextField>
+            <Button fx:id="checkStreetArtWButton" layoutX="364.0" layoutY="320.0" mnemonicParsing="false" style="-fx-background-color: #00ffbb; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #000000;" text="просмотр" />
+            <TextField editable="false" layoutX="322.0" layoutY="95.0" prefHeight="26.0" prefWidth="153.0" style="-fx-background-color: #00e8ff; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="Премьера 10-10-21">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </TextField>
+            <TextField editable="false" layoutX="583.0" layoutY="95.0" prefHeight="26.0" prefWidth="153.0" style="-fx-background-color: #00e8ff; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: black;" text="Премьера 13-11-21">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" editable="false" layoutX="706.0" layoutY="279.0" prefHeight="33.0" prefWidth="80.0" style="-fx-background-color: #ffeb0d; -fx-background-radius: 12; -fx-border-radius: 12;" text="Скоро!">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </TextField>
          </children>
       </AnchorPane>
       <Line endX="-130.99998474121094" endY="-10.400005340576172" layoutX="142.0" layoutY="56.0" startX="-130.99998474121094" startY="124.80000305175781" stroke="#8b8bcc" />

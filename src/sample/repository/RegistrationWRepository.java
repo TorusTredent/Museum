@@ -54,6 +54,28 @@ public class RegistrationWRepository extends Configs {
         }
         return false;
     }
+
+    public static int getUserId(String login) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+            try (Connection connection = DriverManager.getConnection(url, username, password)) {
+
+                String query = "SELECT " + Const.USER_ID + " FROM " + Const.USER_TABLE + " WHERE " +
+                        Const.USER_USERNAME + " = '" + login + "'";
+                try (Statement statement = connection.createStatement()) {
+                    ResultSet rs = statement.executeQuery(query);
+                    if (rs.next()) {
+                        return rs.getInt(1);
+                    }
+                }
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }
 
 
